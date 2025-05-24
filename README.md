@@ -1,0 +1,1 @@
+Por favor, instalar a extensão flask ao vscode para o funcionamento do código. Ao instalar, criar um ambiente virtual, caso contrário, terá que informar ao windows manualmente onde a extensão foi instalada na máquina.
