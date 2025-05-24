@@ -1,0 +1,461 @@
+<h2>Módulo 1: Introdução à Lógica de Programação</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZprytP4m_qA" frameborder="0" allowfullscreen></iframe>
+
+<form method="post" action="/resposta">
+  <ol>
+    {% set respostas_certas = {
+      'm1_q1': 'B',
+      'm1_q2': 'C',
+      'm1_q3': 'A',
+      'm1_q4': 'A',
+      'm1_q5': 'B',
+      'm1_q6': 'C',
+      'm1_q7': 'B',
+      'm1_q8': 'C',
+      'm1_q9': 'A',
+      'm1_q10': 'B'
+    } %}
+
+    <li>
+      O que é lógica de programação?<br>
+      <label style="color: {% if request.form.get('m1_q1') == 'A' %}green{% elif request.form.get('m1_q1') %}red{% endif %};">
+        <input type="radio" name="m1_q1" value="A"> A) Apenas decorar códigos.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q1') == 'B' %}green{% elif request.form.get('m1_q1') %}red{% endif %};">
+        <input type="radio" name="m1_q1" value="B"> B) Raciocínio para resolver problemas com algoritmos.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q1') == 'C' %}green{% elif request.form.get('m1_q1') %}red{% endif %};">
+        <input type="radio" name="m1_q1" value="C"> C) Criar sites.
+      </label>
+    </li><br>
+
+    <li>
+      O que é um algoritmo?<br>
+      <label style="color: {% if request.form.get('m1_q2') == 'A' %}green{% elif request.form.get('m1_q2') %}red{% endif %};">
+        <input type="radio" name="m1_q2" value="A"> A) Um comando de teclado.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q2') == 'B' %}green{% elif request.form.get('m1_q2') %}red{% endif %};">
+        <input type="radio" name="m1_q2" value="B"> B) Um tipo de dado.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q2') == 'C' %}green{% elif request.form.get('m1_q2') %}red{% endif %};">
+        <input type="radio" name="m1_q2" value="C"> C) Conjunto de passos para resolver um problema.
+      </label>
+    </li><br>
+
+    <li>
+      Qual é o primeiro passo para resolver um problema com programação?<br>
+      <label style="color: {% if request.form.get('m1_q3') == 'A' %}green{% elif request.form.get('m1_q3') %}red{% endif %};">
+        <input type="radio" name="m1_q3" value="A"> A) Entender o problema.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q3') == 'B' %}green{% elif request.form.get('m1_q3') %}red{% endif %};">
+        <input type="radio" name="m1_q3" value="B"> B) Escrever código.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q3') == 'C' %}green{% elif request.form.get('m1_q3') %}red{% endif %};">
+        <input type="radio" name="m1_q3" value="C"> C) Criar um banco de dados.
+      </label>
+    </li><br>
+
+    <li>
+      A lógica de programação está relacionada com:<br>
+      <label style="color: {% if request.form.get('m1_q4') == 'A' %}green{% elif request.form.get('m1_q4') %}red{% endif %};">
+        <input type="radio" name="m1_q4" value="A"> A) Sequência lógica de instruções.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q4') == 'B' %}green{% elif request.form.get('m1_q4') %}red{% endif %};">
+        <input type="radio" name="m1_q4" value="B"> B) Instalação de programas.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q4') == 'C' %}green{% elif request.form.get('m1_q4') %}red{% endif %};">
+        <input type="radio" name="m1_q4" value="C"> C) Atualizações do sistema.
+      </label>
+    </li><br>
+
+    <li>
+      Qual dessas estruturas é usada para tomada de decisão?<br>
+      <label style="color: {% if request.form.get('m1_q5') == 'A' %}green{% elif request.form.get('m1_q5') %}red{% endif %};">
+        <input type="radio" name="m1_q5" value="A"> A) while.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q5') == 'B' %}green{% elif request.form.get('m1_q5') %}red{% endif %};">
+        <input type="radio" name="m1_q5" value="B"> B) if.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q5') == 'C' %}green{% elif request.form.get('m1_q5') %}red{% endif %};">
+        <input type="radio" name="m1_q5" value="C"> C) for.
+      </label>
+    </li><br>
+
+    <li>
+      Qual é a representação gráfica de um algoritmo?<br>
+      <label style="color: {% if request.form.get('m1_q6') == 'A' %}green{% elif request.form.get('m1_q6') %}red{% endif %};">
+        <input type="radio" name="m1_q6" value="A"> A) Planilha.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q6') == 'B' %}green{% elif request.form.get('m1_q6') %}red{% endif %};">
+        <input type="radio" name="m1_q6" value="B"> B) Linha de código.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q6') == 'C' %}green{% elif request.form.get('m1_q6') %}red{% endif %};">
+        <input type="radio" name="m1_q6" value="C"> C) Fluxograma.
+      </label>
+    </li><br>
+
+    <li>
+      O que significa depurar um código?<br>
+      <label style="color: {% if request.form.get('m1_q7') == 'A' %}green{% elif request.form.get('m1_q7') %}red{% endif %};">
+        <input type="radio" name="m1_q7" value="A"> A) Traduzir código.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q7') == 'B' %}green{% elif request.form.get('m1_q7') %}red{% endif %};">
+        <input type="radio" name="m1_q7" value="B"> B) Corrigir erros.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q7') == 'C' %}green{% elif request.form.get('m1_q7') %}red{% endif %};">
+        <input type="radio" name="m1_q7" value="C"> C) Reiniciar o programa.
+      </label>
+    </li><br>
+
+    <li>
+      Qual estrutura permite repetir comandos em um algoritmo?<br>
+      <label style="color: {% if request.form.get('m1_q8') == 'A' %}green{% elif request.form.get('m1_q8') %}red{% endif %};">
+        <input type="radio" name="m1_q8" value="A"> A) if.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q8') == 'B' %}green{% elif request.form.get('m1_q8') %}red{% endif %};">
+        <input type="radio" name="m1_q8" value="B"> B) def.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q8') == 'C' %}green{% elif request.form.get('m1_q8') %}red{% endif %};">
+        <input type="radio" name="m1_q8" value="C"> C) while.
+      </label>
+    </li><br>
+
+    <li>
+      Qual o objetivo principal de se usar lógica na programação?<br>
+      <label style="color: {% if request.form.get('m1_q9') == 'A' %}green{% elif request.form.get('m1_q9') %}red{% endif %};">
+        <input type="radio" name="m1_q9" value="A"> A) Resolver problemas com eficiência.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q9') == 'B' %}green{% elif request.form.get('m1_q9') %}red{% endif %};">
+        <input type="radio" name="m1_q9" value="B"> B) Copiar códigos.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q9') == 'C' %}green{% elif request.form.get('m1_q9') %}red{% endif %};">
+        <input type="radio" name="m1_q9" value="C"> C) Memorizar funções.
+      </label>
+    </li><br>
+
+    <li>
+      O que significa a expressão "passo a passo" em lógica?<br>
+      <label style="color: {% if request.form.get('m1_q10') == 'A' %}green{% elif request.form.get('m1_q10') %}red{% endif %};">
+        <input type="radio" name="m1_q10" value="A"> A) Tentar várias soluções.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q10') == 'B' %}green{% elif request.form.get('m1_q10') %}red{% endif %};">
+        <input type="radio" name="m1_q10" value="B"> B) Seguir uma sequência ordenada de ações.
+      </label><br>
+      <label style="color: {% if request.form.get('m1_q10') == 'C' %}green{% elif request.form.get('m1_q10') %}red{% endif %};">
+        <input type="radio" name="m1_q10" value="C"> C) Usar ferramentas externas.
+      </label>
+    </li><br>
+
+  </ol>
+  <input type="submit" value="Enviar Respostas">
+</form>
+
+<hr>
+
+<h2>Módulo 2: Introdução ao Python</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S9uPNppGsGo" frameborder="0" allowfullscreen></iframe>
+<h4>Perguntas:</h4>
+
+<form method="post" action="/resposta">
+  <ol>
+    {% set respostas_certas = {
+      'm2_q1': 'B',
+      'm2_q2': 'B',
+      'm2_q3': 'A',
+      'm2_q4': 'A',
+      'm2_q5': 'C',
+      'm2_q6': 'A',
+      'm2_q7': 'A',
+      'm2_q8': 'B',
+      'm2_q9': 'A',
+      'm2_q10': 'B'
+    } %}
+    
+    <li>
+      Qual a função da palavra-chave `def` em Python?<br>
+      <label style="color: {% if request.form.get('m2_q1') == 'A' %}green{% elif request.form.get('m2_q1') %}red{% endif %};">
+        <input type="radio" name="m2_q1" value="A"> A) Para definir uma variável.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q1') == 'B' %}green{% elif request.form.get('m2_q1') %}red{% endif %};">
+        <input type="radio" name="m2_q1" value="B"> B) Para definir uma função.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q1') == 'C' %}green{% elif request.form.get('m2_q1') %}red{% endif %};">
+        <input type="radio" name="m2_q1" value="C"> C) Para imprimir um valor.
+      </label>
+    </li><br>
+
+    <li>
+      O que significa o operador `==` em Python?<br>
+      <label style="color: {% if request.form.get('m2_q2') == 'A' %}green{% elif request.form.get('m2_q2') %}red{% endif %};">
+        <input type="radio" name="m2_q2" value="A"> A) Atribuição de valor.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q2') == 'B' %}green{% elif request.form.get('m2_q2') %}red{% endif %};">
+        <input type="radio" name="m2_q2" value="B"> B) Comparação de igualdade.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q2') == 'C' %}green{% elif request.form.get('m2_q2') %}red{% endif %};">
+        <input type="radio" name="m2_q2" value="C"> C) Criação de variáveis.
+      </label>
+    </li><br>
+
+    <li>
+      Como podemos ler dados do usuário em Python?<br>
+      <label style="color: {% if request.form.get('m2_q3') == 'A' %}green{% elif request.form.get('m2_q3') %}red{% endif %};">
+        <input type="radio" name="m2_q3" value="A"> A) Usando o `input()`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q3') == 'B' %}green{% elif request.form.get('m2_q3') %}red{% endif %};">
+        <input type="radio" name="m2_q3" value="B"> B) Usando o `print()`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q3') == 'C' %}green{% elif request.form.get('m2_q3') %}red{% endif %};">
+        <input type="radio" name="m2_q3" value="C"> C) Usando o `def()`.
+      </label>
+    </li><br>
+
+    <li>
+      Qual é a principal estrutura de repetição em Python?<br>
+      <label style="color: {% if request.form.get('m2_q4') == 'A' %}green{% elif request.form.get('m2_q4') %}red{% endif %};">
+        <input type="radio" name="m2_q4" value="A"> A) `for`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q4') == 'B' %}green{% elif request.form.get('m2_q4') %}red{% endif %};">
+        <input type="radio" name="m2_q4" value="B"> B) `while`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q4') == 'C' %}green{% elif request.form.get('m2_q4') %}red{% endif %};">
+        <input type="radio" name="m2_q4" value="C"> C) `loop`.
+      </label>
+    </li><br>
+
+    <li>
+      Como criar um comentário em Python?<br>
+      <label style="color: {% if request.form.get('m2_q5') == 'A' %}green{% elif request.form.get('m2_q5') %}red{% endif %};">
+        <input type="radio" name="m2_q5" value="A"> A) `// comentário`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q5') == 'B' %}green{% elif request.form.get('m2_q5') %}red{% endif %};">
+        <input type="radio" name="m2_q5" value="B"> B) `/* comentário */`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q5') == 'C' %}green{% elif request.form.get('m2_q5') %}red{% endif %};">
+        <input type="radio" name="m2_q5" value="C"> C) `# comentário`.
+      </label>
+    </li><br>
+
+    <li>
+      Qual é o tipo de dado utilizado para números inteiros em Python?<br>
+      <label style="color: {% if request.form.get('m2_q6') == 'A' %}green{% elif request.form.get('m2_q6') %}red{% endif %};">
+        <input type="radio" name="m2_q6" value="A"> A) `int`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q6') == 'B' %}green{% elif request.form.get('m2_q6') %}red{% endif %};">
+        <input type="radio" name="m2_q6" value="B"> B) `float`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q6') == 'C' %}green{% elif request.form.get('m2_q6') %}red{% endif %};">
+        <input type="radio" name="m2_q6" value="C"> C) `string`.
+      </label>
+    </li><br>
+
+    <li>
+      O que faz a função `len()` em Python?<br>
+      <label style="color: {% if request.form.get('m2_q7') == 'A' %}green{% elif request.form.get('m2_q7') %}red{% endif %};">
+        <input type="radio" name="m2_q7" value="A"> A) Retorna o número de elementos em uma lista.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q7') == 'B' %}green{% elif request.form.get('m2_q7') %}red{% endif %};">
+        <input type="radio" name="m2_q7" value="B"> B) Verifica o tamanho de um número.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q7') == 'C' %}green{% elif request.form.get('m2_q7') %}red{% endif %};">
+        <input type="radio" name="m2_q7" value="C"> C) Define o comprimento de uma string.
+      </label>
+    </li><br>
+
+    <li>
+      Como podemos criar uma lista em Python?<br>
+      <label style="color: {% if request.form.get('m2_q8') == 'A' %}green{% elif request.form.get('m2_q8') %}red{% endif %};">
+        <input type="radio" name="m2_q8" value="A"> A) Usando chaves `{}`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q8') == 'B' %}green{% elif request.form.get('m2_q8') %}red{% endif %};">
+        <input type="radio" name="m2_q8" value="B"> B) Usando colchetes `[]`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q8') == 'C' %}green{% elif request.form.get('m2_q8') %}red{% endif %};">
+        <input type="radio" name="m2_q8" value="C"> C) Usando parênteses `()`.
+      </label>
+    </li><br>
+
+    <li>
+      Qual é a sintaxe correta para um laço `for` em Python?<br>
+      <label style="color: {% if request.form.get('m2_q9') == 'A' %}green{% elif request.form.get('m2_q9') %}red{% endif %};">
+        <input type="radio" name="m2_q9" value="A"> A) `for i in range(10):`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q9') == 'B' %}green{% elif request.form.get('m2_q9') %}red{% endif %};">
+        <input type="radio" name="m2_q9" value="B"> B) `for (i=0; i<10; i++):`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q9') == 'C' %}green{% elif request.form.get('m2_q9') %}red{% endif %};">
+        <input type="radio" name="m2_q9" value="C"> C) `for i: 10`.
+      </label>
+    </li><br>
+
+    <li>
+      O que acontece se você tentar dividir por zero em Python?<br>
+      <label style="color: {% if request.form.get('m2_q10') == 'A' %}green{% elif request.form.get('m2_q10') %}red{% endif %};">
+        <input type="radio" name="m2_q10" value="A"> A) O código continuará normalmente.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q10') == 'B' %}green{% elif request.form.get('m2_q10') %}red{% endif %};">
+        <input type="radio" name="m2_q10" value="B"> B) Será gerado um erro `ZeroDivisionError`.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q10') == 'C' %}green{% elif request.form.get('m2_q10') %}red{% endif %};">
+        <input type="radio" name="m2_q10" value="C"> C) O Python irá retornar um valor infinito.
+      </label>
+    </li><br>
+
+  </ol>
+  <input type="submit" value="Enviar">
+</form>
+
+
+<h2>Módulo 3: Funções em Python</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ezfr9d7wd_k" frameborder="0" allowfullscreen></iframe>
+
+<form method="post" action="/resposta">
+  <ol>
+    {% set respostas_certas = {
+      'm3_q1': 'B',
+      'm3_q2': 'C',
+      'm3_q3': 'B',
+      'm3_q4': 'C',
+      'm3_q5': 'C',
+      'm3_q6': 'B',
+      'm3_q7': 'B',
+      'm3_q8': 'B',
+      'm3_q9': 'B',
+      'm3_q10': 'A'
+    } %}
+
+    <li>
+      Qual é a principal vantagem de utilizar funções em Python?<br>
+      <label style="color: {% if request.form.get('m2_q1') == 'A' %}green{% elif request.form.get('m2_q1') %}red{% endif %};">
+        <input type="radio" name="m2_q1" value="A"> A) Elas tornam o código mais lento.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q1') == 'B' %}green{% elif request.form.get('m2_q1') %}red{% endif %};">
+        <input type="radio" name="m2_q1" value="B"> B) Elas ajudam a organizar e reutilizar o código.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q1') == 'C' %}green{% elif request.form.get('m2_q1') %}red{% endif %};">
+        <input type="radio" name="m2_q1" value="C"> C) Elas substituem a necessidade de variáveis.  
+      </label>
+    </li><br>
+
+    <li>
+      Qual palavra-chave é usada para definir uma função em Python?<br>
+      <label style="color: {% if request.form.get('m2_q2') == 'A' %}green{% elif request.form.get('m2_q2') %}red{% endif %};">
+        <input type="radio" name="m2_q2" value="A"> A) function.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q2') == 'B' %}green{% elif request.form.get('m2_q2') %}red{% endif %};">
+        <input type="radio" name="m2_q2" value="B"> B) define.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q2') == 'C' %}green{% elif request.form.get('m2_q2') %}red{% endif %};">
+        <input type="radio" name="m2_q2" value="C"> C) def.
+      </label>
+    </li><br>
+
+    <li>
+     O que é necessário incluir após a definição de uma função?<br>
+      <label style="color: {% if request.form.get('m2_q3') == 'A' %}green{% elif request.form.get('m2_q3') %}red{% endif %};">
+        <input type="radio" name="m2_q3" value="A"> A) Um ponto e vírgula.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q3') == 'B' %}green{% elif request.form.get('m2_q3') %}red{% endif %};">
+        <input type="radio" name="m2_q3" value="B"> B)  Dois pontos e um bloco de código indentado.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q3') == 'C' %}green{% elif request.form.get('m2_q3') %}red{% endif %};">
+        <input type="radio" name="m2_q3" value="C"> C) A palavra 'end'.
+      </label>
+    </li><br>
+
+    <li>
+      Como se chama o valor que uma função pode retornar após sua execução?<br>
+      <label style="color: {% if request.form.get('m2_q4') == 'A' %}green{% elif request.form.get('m2_q4') %}red{% endif %};">
+        <input type="radio" name="m2_q4" value="A"> A) Argumento.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q4') == 'B' %}green{% elif request.form.get('m2_q4') %}red{% endif %};">
+        <input type="radio" name="m2_q4" value="B"> B) Parâmetro
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q4') == 'C' %}green{% elif request.form.get('m2_q4') %}red{% endif %};">
+        <input type="radio" name="m2_q4" value="C"> C) Parâmetro
+      </label>
+    </li><br>
+
+    <li>
+      O que são parâmetros em uma função?<br>
+      <label style="color: {% if request.form.get('m2_q5') == 'A' %}green{% elif request.form.get('m2_q5') %}red{% endif %};">
+        <input type="radio" name="m2_q5" value="A"> A) Valores que a função retorna.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q5') == 'B' %}green{% elif request.form.get('m2_q5') %}red{% endif %};">
+        <input type="radio" name="m2_q5" value="B"> B) Variáveis locais dentro da função.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q5') == 'C' %}green{% elif request.form.get('m2_q5') %}red{% endif %};">
+        <input type="radio" name="m2_q5" value="C"> C) Valores que a função recebe ao ser chamada.
+      </label>
+    </li><br>
+
+    <li>
+      Qual é o resultado da seguinte função? <code>print(soma(2, 3))</code> considerando <code>def soma(a, b): return a + b</code><br>
+      <label style="color: {% if request.form.get('m2_q6') == 'A' %}green{% elif request.form.get('m2_q6') %}red{% endif %};">
+        <input type="radio" name="m2_q6" value="A"> A) 23
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q6') == 'B' %}green{% elif request.form.get('m2_q6') %}red{% endif %};">
+        <input type="radio" name="m2_q6" value="B"> B) 5
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q6') == 'C' %}green{% elif request.form.get('m2_q6') %}red{% endif %};">
+        <input type="radio" name="m2_q6" value="C"> C) Erro
+      </label>
+    </li><br>
+
+    <li>
+      É possível uma função não retornar nenhum valor?<br>
+      <label style="color: {% if request.form.get('m2_q7') == 'A' %}green{% elif request.form.get('m2_q7') %}red{% endif %};">
+        <input type="radio" name="m2_q7" value="A"> A) Não, toda função deve retornar um valor.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q7') == 'B' %}green{% elif request.form.get('m2_q7') %}red{% endif %};">
+        <input type="radio" name="m2_q7" value="B"> B) Sim, basta não utilizar a palavra 'return'.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q7') == 'C' %}green{% elif request.form.get('m2_q7') %}red{% endif %};">
+        <input type="radio" name="m2_q7" value="C"> C) Sim, mas isso causará um erro.
+      </label>
+    </li><br>
+
+    <li>
+      O que acontece se uma função for chamada sem os parâmetros necessários?<br>
+      <label style="color: {% if request.form.get('m2_q8') == 'A' %}green{% elif request.form.get('m2_q8') %}red{% endif %};">
+        <input type="radio" name="m2_q8" value="A"> A) A função utiliza valores padrão.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q8') == 'B' %}green{% elif request.form.get('m2_q8') %}red{% endif %};">
+        <input type="radio" name="m2_q8" value="B"> B) O Python gera um erro.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q8') == 'C' %}green{% elif request.form.get('m2_q8') %}red{% endif %};">
+        <input type="radio" name="m2_q8" value="C"> C) A função é ignorada.
+      </label>
+    </li><br>
+
+    <li>
+      Como se chama uma função que está dentro de outra função?<br>
+      <label style="color: {% if request.form.get('m2_q9') == 'A' %}green{% elif request.form.get('m2_q9') %}red{% endif %};">
+        <input type="radio" name="m2_q9" value="A"> A) Função interna.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q9') == 'B' %}green{% elif request.form.get('m2_q9') %}red{% endif %};">
+        <input type="radio" name="m2_q9" value="B"> B) Função aninhada.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q9') == 'C' %}green{% elif request.form.get('m2_q9') %}red{% endif %};">
+        <input type="radio" name="m2_q9" value="C"> C) Função recursiva
+      </label>
+    </li><br>
+
+    <li>
+      O que é uma função recursiva?<br>
+      <label style="color: {% if request.form.get('m2_q10') == 'A' %}green{% elif request.form.get('m2_q10') %}red{% endif %};">
+        <input type="radio" name="m2_q10" value="A"> A) Uma função que chama a si mesma.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q10') == 'B' %}green{% elif request.form.get('m2_q10') %}red{% endif %};">
+        <input type="radio" name="m2_q10" value="B"> B) Uma função que nunca termina.
+      </label><br>
+      <label style="color: {% if request.form.get('m2_q10') == 'C' %}green{% elif request.form.get('m2_q10') %}red{% endif %};">
+        <input type="radio" name="m2_q10" value="C"> C) Uma função que não possui parâmetros.
+      </label>
+    </li><br>
+
+  </ol>
+  <input type="submit" value="Enviar">
+</form>
+
+
